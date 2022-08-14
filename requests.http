@@ -1,0 +1,102 @@
+####
+# просмотр почты
+GET http://127.0.0.1:5000/email/c2b483df-c10e-4355-b6e1-6a32f4b713ec
+content-type: application/json
+####
+####
+# просмотр почты
+POST http://127.0.0.1:5000/email-send/2
+content-type: application/json
+####
+####
+# просмотр почт
+POST http://127.0.0.1:5000/email-send-all/
+content-type: application/json
+####
+
+
+####
+# просмотр пользователь
+GET http://127.0.0.1:5000/api/users/2
+content-type: application/json
+####
+
+####
+# регистрация1
+POST http://127.0.0.1:5000/api/login/
+content-type: application/json
+
+{
+  "username": "tester1",
+  "email": "testflaskhwpy1@mail.ru",
+  "password": "*********"
+}
+####" "
+
+####
+# регистрация2
+POST http://127.0.0.1:5000/api/login/
+content-type: application/json
+
+{
+  "username": "tester2",
+  "email": "testflaskhwpy2@gmai.com",
+  "password": "*********"
+}
+####
+
+
+####
+# просморт всех объявлений
+GET http://127.0.0.1:5000/api/posts/
+content-type: application/json
+####
+
+####
+# просморт одного объявления
+GET http://127.0.0.1:5000/api/posts/14
+content-type: application/json
+####
+
+####
+# добавление объявления 1
+POST http://127.0.0.1:5000/api/posts/
+content-type: application/json
+Authorization: 
+
+{
+  "title": "test1",
+  "content": "This is test content"
+}
+####
+
+####
+# добавление объявления 2
+POST http://127.0.0.1:5000/api/posts/
+content-type: application/json
+Authorization: 
+
+{
+  "title": "test2",
+  "content": "This is test content"
+}
+####
+
+# удаление объявления
+DELETE http://127.0.0.1:5000/api/posts/14
+content-type: application/json
+Authorization: 
+####
+
+# обновление объявления
+PUT http://127.0.0.1:5000/api/posts/13
+content-type: application/json
+Authorization: 
+
+{
+  "title": "test2",
+  "content": "This is new new test content"
+}
+
+####
+
